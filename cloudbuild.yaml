@@ -41,3 +41,18 @@ steps:
   volumes:
   - name: m2
     path: /root/.m2/
+    
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'cloudrunservice'
+  - '--image'
+  - 'eu.gcr.io/${PROJECT_ID}/${_IMAGE_NAME}'
+  - '--region'
+  - 'europe-west6-a'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+images:
+  - 'eu.gcr.io/${PROJECT_ID}/${_IMAGE_NAME}'
