@@ -1,5 +1,5 @@
 substitutions:
-  _IMAGE_NAME: cloud-build-demo # Configure this
+  _IMAGE_NAME: cloud-build-demo1 # Configure this
   _GCS_CACHE_BUCKET: cloud-build-demo121
 
 steps:
