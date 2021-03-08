@@ -35,6 +35,10 @@ public class PubSubController {
   @RequestMapping(value = "/", method = RequestMethod.POST)
   public ResponseEntity receiveMessage(@RequestBody Body body) {
     // Get PubSub message from request body.
+	  
+	  
+	System.out.println(body);
+	  
     Body.Message message = body.getMessage();
     if (message == null) {
       String msg = "Bad Request: invalid Pub/Sub message format";
