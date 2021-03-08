@@ -37,7 +37,7 @@ public class PubSubController {
     // Get PubSub message from request body.
 	  
 	  
-	System.out.println(body);
+	System.out.println(body.toString());
 	  
     Body.Message message = body.getMessage();
     if (message == null) {
